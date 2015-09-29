@@ -129,6 +129,11 @@ change(sixdig);
 
 // 15. Create a die rolling function that accepts two parameters (the two six-sided dice) and outputs an array of the two values rolled.
 
+var die = function(x,y) {
+return [x,y];
+};
+console.log (die(2,3));
+
 // 16. Create another fuction called "whichSide". It will accept the array from above as it's only parameter.
 //     This function will mimic a Monopoly board. Start playerOne at the Go space (0) and add the two values from your die array to determine
 //     how many spaces the player will move. Log to the console which side of the board the player is on.
