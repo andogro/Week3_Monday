@@ -103,10 +103,27 @@ change(sixdig);
 //     The function should take each number of coins and multiply it times each coin's value.
 //     Finally, it should return the total amount of change you have in the following format: "$32.77"
 
-
-
+var countMoney = function(quarters,dimes,nickels,pennies) {
+  var total = (quarters*25 + dimes*10 + nickels*5 + pennies);
+  console.log("$" + (total/100).toFixed(2));
+};
+countMoney(9,2,11,2);
 
 // 11. Develop a function that determines a person's age by prompting them for their birth year.
+
+var d = new Date();
+var thisYear = d.getFullYear();
+var birthYear = prompt("Please enter your Birth Year");
+if (birthYear > thisYear) {
+  alert("Impossible, try again");
+  var birthYear = prompt("Please enter your Birth Year");
+}
+
+var age = function(z) {
+alert("You Are " + (thisYear - birthYear) + " years old."); 
+};
+
+age(birthYear);
 
 // 12. Write a function that takes a year and reports whether or not it is a leap year.
 //     Remember, a leap year occurs:
