@@ -22,14 +22,15 @@ greeting("Joe","John");
 var ppu = function(price) {
 return price * 6;
 };
-price (3.33);
+ppu(3.33);
 
 
 // 4. Write a function that accepts the following array and separates the people into two teams.
 //    No names next to eachother in the array should be on the same team.
       teammates = ["Harold", "Bob", "Sue", "Grady", "Notorious B.I.G.", "JavaCrypt", "Weird guy in the back", "Gary", "Carol", "Hipster Tim", "Janet"]
 
-
+var team1 = [];
+var team2 =[];
 var teams = function(split) {
 for teamates (i=0; teamates.length; )
 }
