@@ -79,20 +79,32 @@ sleepings(9);
 //    (Hint, you will have to turn the integer into a string before you can reverse it.)
 
 var sixdig = prompt("Enter a six digit number");
-
-var reverse = function(a) {
-
-var sixdig = sixdig.toString()
-console.log(sixdig);
-
-}
+var change = function(c) {
+var b = c.toString().split('').reverse().join('');
+console.log(b);
+};
+change(sixdig);
 
 // 9. Within the fuction you wrote in #7, write a conditional statement that checks to ensure the user entered a six digit integer.
 //    If they have not entered a six digit integer, give them a message about being a failure.
 
+var sixdig = prompt("Enter a six digit number");
+if (sixdig.length != 6) {
+  console.log("Enter six numbers bro");
+}
+var change = function(c) {
+var b = c.toString().split('').reverse().join('');
+console.log(b);
+};
+change(sixdig);
+
+
 // 10. You've finally gotten around to counting the change in your piggy bank. Write a function that accepts four parameters (quarters, dimes, nickels, and pennies).
 //     The function should take each number of coins and multiply it times each coin's value.
 //     Finally, it should return the total amount of change you have in the following format: "$32.77"
+
+
+
 
 // 11. Develop a function that determines a person's age by prompting them for their birth year.
 
