@@ -119,10 +119,9 @@ if (birthYear > thisYear) {
   var birthYear = prompt("Please enter your Birth Year");
 }
 
-var age = function(z) {
+var age = function() {
 alert("You Are " + (thisYear - birthYear) + " years old."); 
 };
-
 age(birthYear);
 
 // 12. Write a function that takes a year and reports whether or not it is a leap year.
@@ -131,6 +130,8 @@ age(birthYear);
 //        Except every year that is evenly divisible by 100
 //        Unless the year is also evenly divisible by 400
 //        For example, 1997 is not a leap year, but 1996 is.  1900 is not a leapyear, but 2000 is
+
+
 
 // 13. Develop a function that cleans up a phone number entered by a user.
 //     The rules are as follows:
