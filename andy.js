@@ -204,17 +204,17 @@ cleanUp(phoneNoHyphen);
 //     Iterate over the elements in the following array to determine if each is a number.
 
 var arrayOfAllTheThings = ["one", 23, {thingsWhalesLove: "beaches"}, "six hundred", 33, 6834, "5,435"];
-var isNumber = function() {
-  for (i=0; i<arrayOfAllTheThings.length; i++) {
-    var numberTest = isNaN(arrayOfAllTheThings[i]);
+var isNumber = function(x) {
+  for (i=0; i<x.length; i++) {
+    var numberTest = isNaN(x[i]);
     if (numberTest === false) {
-      console.log(arrayOfAllTheThings[i] + " Is a number");
+      console.log(x[i] + " Is a number");
     }
-    else {console.log (arrayOfAllTheThings[i] + " Is not a number");
+    else {console.log (x[i] + " Is not a number");
   }
   }
 };
-isNumber();
+isNumber(arrayOfAllTheThings);
 
 
 
