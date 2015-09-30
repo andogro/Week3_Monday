@@ -27,13 +27,25 @@ ppu(3.33);
 
 // 4. Write a function that accepts the following array and separates the people into two teams.
 //    No names next to eachother in the array should be on the same team.
-      teammates = ["Harold", "Bob", "Sue", "Grady", "Notorious B.I.G.", "JavaCrypt", "Weird guy in the back", "Gary", "Carol", "Hipster Tim", "Janet"]
 
-var team1 = [];
-var team2 =[];
-var teams = function(split) {
-for teamates (i=0; teamates.length; )
-}
+console.log("Question 4");
+var teammates = ["Harold", "Bob", "Sue", "Grady", "Notorious B.I.G.",
+ "JavaCrypt", "Weird guy in the back", "Gary", "Carol", "Hipster Tim", "Janet"];
+
+      var team1 =[];
+      var team2 =[];
+      var teams = function(a) {
+      for(i=0; i<teammates.length; i++) {
+    if (i % 2 === 0) {
+     team1.push(teammates[i]);
+    }
+     else {
+       team2.push(teammates[i]);
+               }
+        }
+    };
+teams();
+console.log(team1 + "\n" + team2);
 
 
 // 5. Define a function called "quarter". It accepts one parameter called "number".
@@ -47,6 +59,19 @@ for teamates (i=0; teamates.length; )
 //                      print out a statement saying the number is even
 //                  else
 //                      print out a statement saying the number is odd
+
+var quarter = function(number) {
+  var z = number/4;
+  if (z % 2 === 0) {
+    return "The number is even";
+  }
+  else {
+    return "The number is odd";
+  }
+};
+
+console.log(quarter(8));
+
 
 // 6. Define functions called "area" and "perimeter". They should both accept two parameters and calculate the area and perimeter of a rectangle.
 
@@ -85,6 +110,7 @@ console.log(b);
 };
 change(sixdig);
 
+
 // 9. Within the fuction you wrote in #7, write a conditional statement that checks to ensure the user entered a six digit integer.
 //    If they have not entered a six digit integer, give them a message about being a failure.
 
@@ -92,12 +118,6 @@ var sixdig = prompt("Enter a six digit number");
 if (sixdig.length != 6) {
   console.log("Enter six numbers bro");
 }
-var change = function(c) {
-var b = c.toString().split('').reverse().join('');
-console.log(b);
-};
-change(sixdig);
-
 
 // 10. You've finally gotten around to counting the change in your piggy bank. Write a function that accepts four parameters (quarters, dimes, nickels, and pennies).
 //     The function should take each number of coins and multiply it times each coin's value.
@@ -109,19 +129,21 @@ var countMoney = function(quarters,dimes,nickels,pennies) {
 };
 countMoney(9,2,11,2);
 
+
 // 11. Develop a function that determines a person's age by prompting them for their birth year.
 
 var d = new Date();
 var thisYear = d.getFullYear();
 var birthYear = prompt("Please enter your Birth Year");
 if (birthYear > thisYear) {
-  alert("Impossible, try again");
+  console.log("Impossible, try again");
   var birthYear = prompt("Please enter your Birth Year");
 }
 
 var age = function() {
-alert("You Are " + (thisYear - birthYear) + " years old."); 
-};
+console.log ("You Are " thisYear - birthYear " years old." )
+
+}
 age(birthYear);
 
 // 12. Write a function that takes a year and reports whether or not it is a leap year.
@@ -131,7 +153,22 @@ age(birthYear);
 //        Unless the year is also evenly divisible by 400
 //        For example, 1997 is not a leap year, but 1996 is.  1900 is not a leapyear, but 2000 is
 
-
+var leapYear = prompt("Enter a 4 digit year");
+var leapCheck = function(y) {
+  if ((y % 100 === 0) && (y % 400 === 0)) {
+    console.log(y+ " IS A LEAP YEAR");
+  }
+else if (y % 100 === 0) {
+  console.log(y+ " is not a leap year");
+}
+else if ( y % 4 === 0) {
+    console.log(y+ " is a leap year");
+     }
+else {
+console.log(y+ " is not a leap year");
+}
+};
+leapCheck(leapYear);
 
 // 13. Develop a function that cleans up a phone number entered by a user.
 //     The rules are as follows:
@@ -141,15 +178,52 @@ age(birthYear);
 //        If the phone number is 11 digits and the first number is not 1, then it is a bad number
 //        If the phone number is more than 11 digits assume that it is a bad number
 
+var phone = prompt("Enter Your Phone #");
+var phoneNoHyphen = phone.replace(/-/g,"");
+var cleanUp = function(a) {
+  if ((a.length < 10) || (a.length > 11)) {
+    alert("bad number");
+    console.log(a+ "condition 1");
+  }
+  else if ((a.length == 11) && (a.charAt(0) == 1)) {
+    a = a.slice(1);
+    console.log(a+ "condition 2");
+  }
+  else if ((a.length == 11) && (a.charAt(0) !== 1)) {
+    alert("bad number");
+    console.log(a+ "condition 3");
+  }
+  else {
+    console.log(a+ "condition 4");
+  }
+};
+cleanUp(phoneNoHyphen);
+
+
 // 14. Create a function that determines whether a parameter is a number or not (Hint: google "isNan")
 //     Iterate over the elements in the following array to determine if each is a number.
-       arrayOfAllTheThings = ["one", 23, {thingsWhalesLove: "beaches"}, "six hundred", 33, 6834, "5,435"]
+
+var arrayOfAllTheThings = ["one", 23, {thingsWhalesLove: "beaches"}, "six hundred", 33, 6834, "5,435"];
+var isNumber = function() {
+  for (i=0; i<arrayOfAllTheThings.length; i++) {
+    var numberTest = isNaN(arrayOfAllTheThings[i]);
+    if (numberTest === false) {
+      console.log(arrayOfAllTheThings[i] + " Is a number");
+    }
+    else {console.log (arrayOfAllTheThings[i] + " Is not a number");
+  }
+  }
+};
+isNumber();
+
+
+
 
 // 15. Create a die rolling function that accepts two parameters (the two six-sided dice) and outputs an array of the two values rolled.
 
 var die = function(x,y) {
 return [x,y];
-};
+}
 console.log (die(2,3));
 
 // 16. Create another fuction called "whichSide". It will accept the array from above as it's only parameter.
